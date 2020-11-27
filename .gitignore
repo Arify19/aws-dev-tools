@@ -1,4 +1,6 @@
 **.env
 **.pem
 **.json
+**.log
+**.txt
 .vscode

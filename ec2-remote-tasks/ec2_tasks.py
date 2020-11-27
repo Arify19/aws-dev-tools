@@ -34,7 +34,7 @@ session = boto3.Session(
 # Initialize an EC2 client
 client = session.client("ec2")
 
-# Initialize an EC2 session
+# Initialize an EC2 resource client
 ec2 = session.resource("ec2")
 
 #Create new keypair file
@@ -52,7 +52,7 @@ keyfile.write(keypair_data)
 keyfile.close()
 
 #Change key permissions as required by AWS ssh policies
-os.chmod("ec2-keypair.pem", 400)
+os.chmod(key_filename, 400)
 
 
 # Create an EC2 VM in AWS
@@ -96,12 +96,12 @@ print("Waiting for instance to finish setting up...\n")
 time.sleep(10)
 
 #Create the ssh client and run commands
-key = paramiko.RSAKey.from_private_key_file("./ec2-keypair.pem")
+key = paramiko.RSAKey.from_private_key_file(key_filename)
 ssh_client = paramiko.SSHClient()
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 #Load commands from file
-cmd_file = open("commands", 'r')
+cmd_file = open("commands.txt", 'r')
 cmds = cmd_file.readlines()
 cmd_file.close()
 
