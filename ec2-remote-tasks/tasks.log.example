@@ -1,0 +1,114 @@
+# Example log file for a fresh Amazon Linux 2 Instance
+
+> ls -al
+total 12
+drwx------ 3 ec2-user ec2-user  74 Nov 27 02:46 .
+drwxr-xr-x 3 root     root      22 Nov 27 02:46 ..
+-rw-r--r-- 1 ec2-user ec2-user  18 Jan 16  2020 .bash_logout
+-rw-r--r-- 1 ec2-user ec2-user 193 Jan 16  2020 .bash_profile
+-rw-r--r-- 1 ec2-user ec2-user 231 Jan 16  2020 .bashrc
+drwx------ 2 ec2-user ec2-user  29 Nov 27 02:46 .ssh
+
+> pwd
+/home/ec2-user
+
+> ps -aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  7.8  0.5  43560  5272 ?        Ss   02:46   0:01 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
+root         2  0.0  0.0      0     0 ?        S    02:46   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        I    02:46   0:00 [kworker/0:0]
+root         4  0.0  0.0      0     0 ?        I<   02:46   0:00 [kworker/0:0H]
+root         5  0.0  0.0      0     0 ?        I    02:46   0:00 [kworker/u30:0]
+root         6  0.0  0.0      0     0 ?        I<   02:46   0:00 [mm_percpu_wq]
+root         7  0.1  0.0      0     0 ?        S    02:46   0:00 [ksoftirqd/0]
+root         8  0.6  0.0      0     0 ?        I    02:46   0:00 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    02:46   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    02:46   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    02:46   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    02:46   0:00 [cpuhp/0]
+root        14  0.0  0.0      0     0 ?        S    02:46   0:00 [kdevtmpfs]
+root        15  0.0  0.0      0     0 ?        I<   02:46   0:00 [netns]
+root        16  0.0  0.0      0     0 ?        I    02:46   0:00 [kworker/u30:1]
+root        21  0.0  0.0      0     0 ?        S    02:46   0:00 [xenbus]
+root        22  0.0  0.0      0     0 ?        S    02:46   0:00 [xenwatch]
+root        23  0.1  0.0      0     0 ?        I    02:46   0:00 [kworker/0:1]
+root       172  0.0  0.0      0     0 ?        S    02:46   0:00 [khungtaskd]
+root       173  0.0  0.0      0     0 ?        S    02:46   0:00 [oom_reaper]
+root       174  0.0  0.0      0     0 ?        I<   02:46   0:00 [writeback]
+root       176  0.0  0.0      0     0 ?        S    02:46   0:00 [kcompactd0]
+root       177  0.0  0.0      0     0 ?        SN   02:46   0:00 [ksmd]
+root       178  0.0  0.0      0     0 ?        SN   02:46   0:00 [khugepaged]
+root       179  0.0  0.0      0     0 ?        I<   02:46   0:00 [crypto]
+root       180  0.0  0.0      0     0 ?        I<   02:46   0:00 [kintegrityd]
+root       182  0.0  0.0      0     0 ?        I<   02:46   0:00 [kblockd]
+root       535  0.0  0.0      0     0 ?        I<   02:46   0:00 [md]
+root       538  0.0  0.0      0     0 ?        I<   02:46   0:00 [edac-poller]
+root       543  0.0  0.0      0     0 ?        I<   02:46   0:00 [watchdogd]
+root       684  0.0  0.0      0     0 ?        S    02:46   0:00 [kauditd]
+root       690  0.0  0.0      0     0 ?        S    02:46   0:00 [kswapd0]
+root       822  0.0  0.0      0     0 ?        I<   02:46   0:00 [kthrotld]
+root       872  0.0  0.0      0     0 ?        I<   02:46   0:00 [kstrp]
+root       900  0.0  0.0      0     0 ?        I<   02:46   0:00 [ipv6_addrconf]
+root       933  0.0  0.0      0     0 ?        I    02:46   0:00 [kworker/0:2]
+root       936  0.2  0.0      0     0 ?        I    02:46   0:00 [kworker/0:3]
+root      1741  0.0  0.0      0     0 ?        I<   02:46   0:00 [ata_sff]
+root      1746  0.0  0.0      0     0 ?        S    02:46   0:00 [scsi_eh_0]
+root      1756  0.0  0.0      0     0 ?        I<   02:46   0:00 [scsi_tmf_0]
+root      1760  0.0  0.0      0     0 ?        S    02:46   0:00 [scsi_eh_1]
+root      1761  0.0  0.0      0     0 ?        I<   02:46   0:00 [scsi_tmf_1]
+root      1765  0.0  0.0      0     0 ?        I    02:46   0:00 [kworker/u30:2]
+root      1766  0.0  0.0      0     0 ?        I    02:46   0:00 [kworker/u30:3]
+root      1810  0.0  0.0      0     0 ?        I    02:46   0:00 [kworker/u30:4]
+root      1855  0.0  0.0      0     0 ?        I<   02:46   0:00 [xfsalloc]
+root      1856  0.0  0.0      0     0 ?        I<   02:46   0:00 [xfs_mru_cache]
+root      1858  0.0  0.0      0     0 ?        I<   02:46   0:00 [xfs-buf/xvda1]
+root      1859  0.0  0.0      0     0 ?        I<   02:46   0:00 [xfs-data/xvda1]
+root      1860  0.0  0.0      0     0 ?        I<   02:46   0:00 [xfs-conv/xvda1]
+root      1861  0.0  0.0      0     0 ?        I<   02:46   0:00 [xfs-cil/xvda1]
+root      1862  0.0  0.0      0     0 ?        I<   02:46   0:00 [xfs-reclaim/xvd]
+root      1863  0.0  0.0      0     0 ?        I<   02:46   0:00 [xfs-log/xvda1]
+root      1864  0.0  0.0      0     0 ?        I<   02:46   0:00 [xfs-eofblocks/x]
+root      1865  0.0  0.0      0     0 ?        S    02:46   0:00 [xfsaild/xvda1]
+root      1866  0.0  0.0      0     0 ?        I<   02:46   0:00 [kworker/0:1H]
+root      1931  1.3  0.6  41056  6340 ?        Ss   02:46   0:00 /usr/lib/systemd/systemd-journald
+root      1942  0.0  0.0      0     0 ?        I    02:46   0:00 [kworker/0:4]
+root      1956  0.0  0.0      0     0 ?        I<   02:46   0:00 [ena]
+root      1963  0.0  0.2 116760  2056 ?        Ss   02:46   0:00 /usr/sbin/lvmetad -f
+root      1968  0.3  0.3  37860  4016 ?        Ss   02:46   0:00 /usr/lib/systemd/systemd-udevd
+root      2648  0.0  0.0      0     0 ?        I<   02:46   0:00 [rpciod]
+root      2649  0.0  0.0      0     0 ?        I<   02:46   0:00 [xprtiod]
+root      2653  0.0  0.2  57676  2076 ?        S<sl 02:46   0:00 /sbin/auditd
+libstor+  2682  0.0  0.1  12608  1828 ?        Ss   02:46   0:00 /usr/bin/lsmd -d
+dbus      2684  0.0  0.4  60348  4136 ?        Ss   02:46   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+root      2689  0.0  0.0   4260   104 ?        Ss   02:46   0:00 /usr/sbin/acpid
+root      2693  0.1  0.0  13096   896 ?        Ss   02:46   0:00 /sbin/rngd -f
+root      2694  0.0  0.2  28324  2876 ?        Ss   02:46   0:00 /usr/lib/systemd/systemd-logind
+rpc       2707  0.0  0.3  69336  3212 ?        Ss   02:46   0:00 /sbin/rpcbind -w
+chrony    2709  0.0  0.3 120004  3108 ?        S    02:46   0:00 /usr/sbin/chronyd
+root      2713  0.0  0.2  91352  2836 ?        Ssl  02:46   0:00 /usr/sbin/gssproxy -D
+root      2920  0.0  0.3 100632  3756 ?        Ss   02:46   0:00 /sbin/dhclient -q -lf /var/lib/dhclient/dhclient--eth0.lease -pf /var/run/dhclient-eth0.pid eth0
+root      3025  0.0  0.4 100632  4056 ?        Ss   02:46   0:00 /sbin/dhclient -6 -nw -lf /var/lib/dhclient/dhclient6--eth0.lease -pf /var/run/dhclient6-eth0.pid eth0
+root      3151  0.0  0.1  21800  1252 ?        Ss   02:46   0:00 /usr/lib/systemd/systemd-hostnamed
+root      3177  0.0  0.4  90272  4732 ?        Ss   02:46   0:00 /usr/libexec/postfix/master -w
+postfix   3180  0.0  0.6  90360  6804 ?        S    02:46   0:00 pickup -l -t unix -u
+postfix   3181  0.0  0.6  90436  6688 ?        S    02:46   0:00 qmgr -l -t unix -u
+root      3218  0.4  0.4 216548  4592 ?        Ssl  02:46   0:00 /usr/sbin/rsyslogd -n
+root      3220  5.1  3.2 149772 32808 ?        Ss   02:46   0:00 /usr/bin/python /usr/bin/cloud-init modules --mode=config
+root      3221  0.0  0.2  13628  2576 ?        Ss   02:46   0:00 /bin/bash /usr/sbin/update-motd
+root      3226  0.0  1.3 644672 13612 ?        Ssl  02:46   0:00 /usr/bin/amazon-ssm-agent
+root      3232  0.0  0.2  27872  2220 ?        Ss   02:46   0:00 /usr/sbin/atd -f
+root      3238  0.0  0.2  24664  2708 ?        Ss   02:46   0:00 /usr/sbin/crond -n
+root      3261  0.5  0.1 121288  1760 tty1     Ss+  02:46   0:00 /sbin/agetty --noclear tty1 linux
+root      3262  0.1  0.1  10536  1720 ttyS0    Ss+  02:46   0:00 /sbin/agetty --keep-baud 115200,38400,9600 ttyS0 vt220
+root      3300  0.0  0.0   4236   784 ?        S    02:46   0:00 tee -a /var/log/cloud-init-output.log
+root      3311  0.0  0.0   8520   888 ?        S    02:46   0:00 timeout 10s /etc/update-motd.d/70-available-updates
+root      3313  0.0  0.2  13628  2540 ?        S    02:46   0:00 /bin/bash /etc/update-motd.d/70-available-updates
+root      3316  0.0  0.0   8520   872 ?        S    02:46   0:00 timeout 30s /usr/bin/yum --debuglevel 2 --security check-update
+root      3317  1.1  0.0   9568   980 ?        S    02:46   0:00 grep -P (?<! 0 packages) available$
+root      3319 82.6 13.6 435272 137276 ?       R    02:46   0:04 /usr/bin/python /usr/bin/yum --debuglevel 2 --security check-update
+root      3392  0.0  0.7 112820  7092 ?        Ss   02:46   0:00 /usr/sbin/sshd -D
+root      3394  2.1  3.1 252748 31220 ?        S    02:46   0:00 /usr/bin/python /usr/bin/yum -t -y --exclude=kernel --exclude=nvidia* --exclude=cuda* --security --sec-severity=critical --sec-severity=important upgrade
+root      3397  1.0  0.8 150496  8328 ?        Ss   02:46   0:00 sshd: ec2-user [priv]
+ec2-user  3415  0.0  0.4 150496  4428 ?        S    02:46   0:00 sshd: ec2-user@notty
+ec2-user  3438  0.0  0.3 164364  3888 ?        Rs   02:46   0:00 ps -aux
+

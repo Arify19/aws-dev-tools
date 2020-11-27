@@ -1,0 +1,7 @@
+{
+    "KeyFilename": "ec2-keypair.pem",
+    "ImageId" : "ami-0e95fae3080abdc27",
+    "MinInstances": 5,
+    "MaxInstances": 5,
+    "InstanceType": "t2.micro"
+}
